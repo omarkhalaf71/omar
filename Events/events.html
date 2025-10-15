@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-en="City Events" data-ar="فعاليات المدينة">City Events</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./events.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">City Events</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="../index.html"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./events.html"
+                data-en="Events"
+                data-ar="الفعاليات"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../About/about.html"
+                data-en="About"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Contact/contact.html"
+                data-en="Contact"
+                data-ar="تواصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Language Toggle Button -->
+          <button
+            id="langToggle"
+            class="btn btn-light d-flex align-items-center gap-2">
+            <img
+              id="langFlag"
+              src="https://flagcdn.com/24x18/us.png"
+              alt="US Flag" />
+            <span id="langLabel">EN</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- ===== FILTER BAR ===== -->
+    <section class="filter-bar container-fluid">
+      <form class="row g-3 align-items-center">
+        <div class="col-md-4">
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            placeholder="Search..."
+            data-en="Search..."
+            data-ar="ابحث..." />
+        </div>
+        <div class="col-md-3">
+          <select id="categoryFilter" class="form-select">
+            <option value="" data-en="All Categories" data-ar="كل التصنيفات">
+              All Categories
+            </option>
+            <option value="Music" data-en="Music" data-ar="موسيقى">
+              Music
+            </option>
+            <option value="Sports" data-en="Sports" data-ar="رياضة">
+              Sports
+            </option>
+            <option value="Theatre" data-en="Theatre" data-ar="مسرح">
+              Theatre
+            </option>
+            <option value="Exhibition" data-en="Exhibition" data-ar="معارض">
+              Exhibition
+            </option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <input type="date" class="form-control" id="dateFilter" />
+        </div>
+        <div class="col-md-2">
+          <select id="locationFilter" class="form-select">
+            <option value="" data-en="All Locations" data-ar="كل المواقع">
+              All Locations
+            </option>
+            <option value="Damascus" data-en="Damascus" data-ar="دمشق">
+              Damascus
+            </option>
+            <option value="Homs" data-en="Homs" data-ar="حمص">Homs</option>
+            <option value="Latakia" data-en="Latakia" data-ar="اللاذقية">
+              Latakia
+            </option>
+            <option value="Aleppo" data-en="Aleppo" data-ar="حلب">
+              Aleppo
+            </option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== EVENTS GRID ===== -->
+    <section class="events-container" id="eventsContainer">
+      <!-- ===== 6 EVENTS ===== -->
+      <div
+        class="card event-card"
+        data-category="Music"
+        data-location="Damascus"
+        data-date="2025-10-18">
+        <img src="../assets/img/fastuval.jpg" alt="Concert" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Oct 18, 2025" data-ar="📅 18 تشرين الأول 2025"
+              >📅 Oct 18, 2025</span
+            >
+            <span data-en="📍 Damascus" data-ar="📍 دمشق">📍 Damascus</span>
+            <span data-en="🎵 Music" data-ar="🎵 موسيقى">🎵 Music</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="Autumn Music Festival"
+            data-ar="مهرجان موسيقى الخريف">
+            Autumn Music Festival
+          </h5>
+          <p
+            class="event-desc"
+            data-en="A night of live performances from top Syrian artists."
+            data-ar="ليلة عروض موسيقية حية من أبرز الفنانين السوريين.">
+            A night of live performances from top Syrian artists.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="card event-card"
+        data-category="Sports"
+        data-location="Aleppo"
+        data-date="2025-10-25">
+        <img src="../assets/img/marthon.jpg" alt="Sports" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Oct 25, 2025" data-ar="📅 25 تشرين الأول 2025"
+              >📅 Oct 25, 2025</span
+            >
+            <span data-en="📍 Aleppo" data-ar="📍 حلب">📍 Aleppo</span>
+            <span data-en="⚽ Sports" data-ar="⚽ رياضة">⚽ Sports</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="City Marathon 2025"
+            data-ar="ماراثون المدينة 2025">
+            City Marathon 2025
+          </h5>
+          <p
+            class="event-desc"
+            data-en="Run through Aleppo’s streets. Open for all ages."
+            data-ar="ماراثون عبر شوارع حلب التاريخية، مفتوح لجميع الأعمار.">
+            Run through Aleppo’s streets. Open for all ages.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="card event-card"
+        data-category="Theatre"
+        data-location="Latakia"
+        data-date="2025-11-05">
+        <img src="../assets/img/Shakespeare.webp" alt="Theatre" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Nov 5, 2025" data-ar="📅 5 تشرين الثاني 2025"
+              >📅 Nov 5, 2025</span
+            >
+            <span data-en="📍 Latakia" data-ar="📍 اللاذقية">📍 Latakia</span>
+            <span data-en="🎭 Theatre" data-ar="🎭 مسرح">🎭 Theatre</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="Shakespeare in the City"
+            data-ar="شكسبير في المدينة">
+            Shakespeare in the City
+          </h5>
+          <p
+            class="event-desc"
+            data-en="Modern take on classic plays at Latakia Cultural Center."
+            data-ar="إعادة تقديم عصرية لمسرحيات شكسبير في المركز الثقافي باللاذقية.">
+            Modern take on classic plays at Latakia Cultural Center.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="card event-card"
+        data-category="Exhibition"
+        data-location="Homs"
+        data-date="2025-11-12">
+        <img src="../assets/img/art.jpg" alt="Exhibition" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Nov 12, 2025" data-ar="📅 12 تشرين الثاني 2025"
+              >📅 Nov 12, 2025</span
+            >
+            <span data-en="📍 Homs" data-ar="📍 حمص">📍 Homs</span>
+            <span data-en="🖼 Exhibition" data-ar="🖼 معرض">🖼 Exhibition</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="Art Expo 2025"
+            data-ar="معرض الفن 2025">
+            Art Expo 2025
+          </h5>
+          <p
+            class="event-desc"
+            data-en="Explore contemporary Syrian art in Homs."
+            data-ar="استكشاف الفن السوري المعاصر في حمص.">
+            Explore contemporary Syrian art in Homs.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="card event-card"
+        data-category="Music"
+        data-location="Latakia"
+        data-date="2025-12-01">
+        <img src="../assets/img/music.jpg" alt="Music" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Dec 1, 2025" data-ar="📅 1 كانون الأول 2025"
+              >📅 Dec 1, 2025</span
+            >
+            <span data-en="📍 Latakia" data-ar="📍 اللاذقية">📍 Latakia</span>
+            <span data-en="🎵 Music" data-ar="🎵 موسيقى">🎵 Music</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="Latakia Jazz Night"
+            data-ar="ليلة جاز اللاذقية">
+            Latakia Jazz Night
+          </h5>
+          <p
+            class="event-desc"
+            data-en="Enjoy jazz performances by local bands."
+            data-ar="استمتع بعروض الجاز من الفرق المحلية.">
+            Enjoy jazz performances by local bands.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="card event-card"
+        data-category="Sports"
+        data-location="Damascus"
+        data-date="2025-12-10">
+        <img src="../assets/img/foootbal.jpg" alt="Sports" />
+        <div class="event-body">
+          <div class="event-meta">
+            <span data-en="📅 Dec 10, 2025" data-ar="📅 10 كانون الأول 2025"
+              >📅 Dec 10, 2025</span
+            >
+            <span data-en="📍 Damascus" data-ar="📍 دمشق">📍 Damascus</span>
+            <span data-en="⚽ Sports" data-ar="⚽ رياضة">⚽ Sports</span>
+          </div>
+          <h5
+            class="event-title"
+            data-en="Damascus Football Cup"
+            data-ar="كأس كرة القدم دمشق">
+            Damascus Football Cup
+          </h5>
+          <p
+            class="event-desc"
+            data-en="Annual football tournament in Damascus."
+            data-ar="البطولة السنوية لكرة القدم في دمشق.">
+            Annual football tournament in Damascus.
+          </p>
+          <a href="../Event/event.html">
+            <button
+              class="btn btn-event"
+              data-en="View Details"
+              data-ar="عرض التفاصيل">
+              View Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <h3 data-en="About the City Events" data-ar="عن فعاليات المدينة">
+            About the City Events
+          </h3>
+          <p
+            data-en="A platform to explore and manage the most exciting events happening around the city."
+            data-ar="منصة لاستكشاف وإدارة أبرز الفعاليات المقامة في مدينتنا.">
+            A platform to explore and manage the most exciting events happening
+            around the city.
+          </p>
+        </div>
+
+        <div class="footer-column links">
+          <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+          <ul>
+            <li><a href="#" data-en="Home" data-ar="الرئيسية">Home</a></li>
+            <li>
+              <a href="#" data-en="Upcoming Events" data-ar="الفعاليات القادمة"
+                >Upcoming Events</a
+              >
+            </li>
+            <li>
+              <a href="#" data-en="Photo Gallery" data-ar="معرض الصور"
+                >Photo Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column contact">
+          <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
+          <p>
+            <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> +963 999
+            123 456
+          </p>
+          <p>
+            <strong data-en="Email:" data-ar="البريد:">Email:</strong>
+            info@cityevents.com
+          </p>
+          <p>
+            <strong data-en="Address:" data-ar="العنوان:">Address:</strong>
+            Damascus, Syria
+          </p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p
+          data-en="© 2025 City Events. All Rights Reserved."
+          data-ar="© 2025 فعاليات المدينة. جميع الحقوق محفوظة.">
+          © 2025 City Events. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      // ===== FILTER =====
+      const searchInput = document.getElementById("searchInput")
+      const categoryFilter = document.getElementById("categoryFilter")
+      const dateFilter = document.getElementById("dateFilter")
+      const locationFilter = document.getElementById("locationFilter")
+      const eventsContainer = document.getElementById("eventsContainer")
+      const cards = eventsContainer.querySelectorAll(".event-card")
+
+      function filterEvents() {
+        const search = searchInput.value.toLowerCase()
+        const category = categoryFilter.value
+        const date = dateFilter.value
+        const location = locationFilter.value
+
+        cards.forEach((card) => {
+          const title = card
+            .querySelector(".event-title")
+            .textContent.toLowerCase()
+          const cardCategory = card.dataset.category
+          const cardLocation = card.dataset.location
+          const cardDate = card.dataset.date
+
+          const matchesSearch = title.includes(search)
+          const matchesCategory = !category || cardCategory === category
+          const matchesLocation = !location || cardLocation === location
+          const matchesDate = !date || cardDate === date
+
+          card.style.display =
+            matchesSearch && matchesCategory && matchesLocation && matchesDate
+              ? "block"
+              : "none"
+        })
+      }
+
+      ;[searchInput, categoryFilter, dateFilter, locationFilter].forEach((el) =>
+        el.addEventListener("input", filterEvents)
+      )
+
+      // ===== LANGUAGE SWITCH =====
+      const langToggle = document.getElementById("langToggle")
+      langToggle.addEventListener("click", () => {
+        const html = document.documentElement
+        const isEnglish = html.lang === "en"
+        html.lang = isEnglish ? "ar" : "en"
+        html.dir = isEnglish ? "rtl" : "ltr"
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          el.textContent = html.lang === "en" ? el.dataset.en : el.dataset.ar
+        })
+      })
+    </script>
+  </body>
+</html>
